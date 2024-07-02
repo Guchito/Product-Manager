@@ -1,4 +1,5 @@
 import express from 'express'
+import colors from 'colors'
 import router from './router'
 import db from './config/db'
 
@@ -8,10 +9,10 @@ async function connectDB() {
     try{
         await db.authenticate()
         db.sync()
-        console.log('succses')
+        console.log(colors.blue('DB connection succesfull'))
     }catch(error){
-        console.log(error)
-        console.log('error connecting to DB')
+        //console.log(error)
+        console.log(colors.red('Error connecting to DB'))
     }
     
 }
@@ -19,6 +20,8 @@ async function connectDB() {
 connectDB()
 
 const server = express()
+//Read data from form
+server.use(express.json())
 
 server.use('/api/products', router)
 
