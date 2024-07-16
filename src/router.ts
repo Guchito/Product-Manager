@@ -1,6 +1,6 @@
 import { Router } from "express"
 import { body, param } from "express-validator"
-import { createProduct, getProducts, getProductById, updateProduct, updateAvailability } from "./handlers/product"
+import { createProduct, getProducts, getProductById, updateProduct, updateAvailability, deleteProduct } from "./handlers/product"
 import { handleInputErrors } from "./middleware"
 
 
@@ -14,6 +14,7 @@ router.get('/:id',
     //validation
     param('id').isInt().withMessage('ID not valid'),
     handleInputErrors,
+    //Get
     getProductById
 )
 
@@ -28,12 +29,13 @@ router.post('/',
         .custom((value) => value > 0).withMessage('Price should be more than 0'),
 
     handleInputErrors,
-    
+    //Create
     createProduct)
 
 
 router.put('/:id',
     //Validation
+    param('id').isInt().withMessage('ID not valid'),
     body('name')
         .notEmpty().withMessage('Name is required'),
     body('price')
@@ -43,14 +45,23 @@ router.put('/:id',
     body('avilability')
         .isBoolean().withMessage('Expected true or false'),
     handleInputErrors,
+    //Update
     updateProduct
 )
 
-router.patch('/:id', 
+router.patch('/:id',
+    //validation
+    param('id').isInt().withMessage('ID not valid'),
+    handleInputErrors,
+    //Update
     updateAvailability)
 
-router.delete('/', (req,res) => {
-    res.json('desde delete')
-})
+router.delete('/:id',
+    //validation
+    param('id').isInt().withMessage('ID not valid'),
+    handleInputErrors,
+    deleteProduct
+
+)
 
 export default router
