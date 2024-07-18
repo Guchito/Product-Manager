@@ -5,13 +5,12 @@ import db from './config/db'
 
 
 //conect to db
-async function connectDB() {
+export async function connectDB() {
     try{
         await db.authenticate()
         db.sync()
-        //console.log(colors.blue('DB connection succesfull'))
+        console.log(colors.blue('DB connection succesfull'))
     }catch(error){
-        //console.log(error)
         console.log(colors.red('Error connecting to DB'))
     }
     
