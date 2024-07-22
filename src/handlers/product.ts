@@ -61,7 +61,7 @@ export const updateAvailability = async (req: Request, res: Response) => {
         }
 
         //update
-        product.avilability = !product.dataValues.avilability
+        product.availability = !product.dataValues.availability
         await product.save()
 
         res.json({data: product})

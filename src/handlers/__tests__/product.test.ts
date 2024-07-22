@@ -155,7 +155,7 @@ describe('PUT /api/products/:id', () =>{
             .send({
                 name: "TV Samsung",
                 price: 3500,
-                avilability: true
+                availability: true
             })
         expect(response.status).toBe(404)
         expect(response.body).toHaveProperty('error')
@@ -171,7 +171,7 @@ describe('PUT /api/products/:id', () =>{
             .send({
                 name: "TV Samsung",
                 price: 3500,
-                avilability: true
+                availability: true
             })
         expect(response.status).toBe(200)
         expect(response.body).toHaveProperty('data')
@@ -202,7 +202,7 @@ describe('PATCH /api/products/:id', () =>{
         const response = await request(server).patch('/api/products/1')
         expect(response.status).toBe(200)
         expect(response.body).toHaveProperty('data')
-        expect(response.body.data.avilability).toBe(false)
+        expect(response.body.data.availability).toBe(false)
 
         expect(response.status).not.toBe(400)
         expect(response.status).not.toBe(404)
