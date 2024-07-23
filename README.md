@@ -59,6 +59,7 @@ Follow these steps to get the project up and running on your local machine:
     ```
     DB_URL=your_database_url
     FRONTEND_URL=your_frontend_url
+    API_URL=your_API_url 
     ```
 
 4. **Start the development server:**
