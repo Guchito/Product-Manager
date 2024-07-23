@@ -20,9 +20,13 @@ This project utilizes the following technologies:
 - **Supertest**: Testing HTTP requests.
 - **Jest**: Testing framework.
 
+
+
 ### Frontend
 
 - **React**: JavaScript library for building user interfaces.
+- **Tailwind CSS**: Utility-first CSS framework that streamlines web development by providing a set of pre-designed utility classes.
+
 
 ## Features
 
@@ -42,8 +46,9 @@ Follow these steps to get the project up and running on your local machine:
     cd products-manager
     ```
 
-2. **Install dependencies:**
+2. **Install server dependencies:**
     ```bash
+    cd server
     npm install
     ```
 
@@ -54,6 +59,19 @@ Follow these steps to get the project up and running on your local machine:
     ```
 
 4. **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+
+On another terminal:
+
+1. **Install client dependencies:**
+    ```bash
+    cd client
+    npm install
+    ```
+
+2. **Start the development client:**
     ```bash
     npm run dev
     ```
