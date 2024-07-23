@@ -58,6 +58,7 @@ Follow these steps to get the project up and running on your local machine:
     Create a `.env` file in the server root directory and add the following:
     ```
     DB_URL=your_database_url
+    FRONTEND_URL=your_frontend_url
     ```
 
 4. **Start the development server:**
@@ -72,8 +73,13 @@ On another terminal:
     cd client
     npm install
     ```
+2. **Set up environment variables:**
+    Create a `.env` file in the server root directory and add the following:
+    ```
+    VITE_API_URL=your_API_url
+    ```
 
-2. **Start the development client:**
+3. **Start the development client:**
     ```bash
     npm run dev
     ```
