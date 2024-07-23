@@ -53,7 +53,7 @@ Follow these steps to get the project up and running on your local machine:
     ```
 
 3. **Set up environment variables:**
-    Create a `.env` file in the root directory and add the following:
+    Create a `.env` file in the server root directory and add the following:
     ```
     DB_URL=your_database_url
     ```
@@ -81,7 +81,7 @@ On another terminal:
 To use the application, follow these steps:
 
 1. **Access the frontend:**
-    Open your browser and navigate to `http://localhost:4000`.
+    Open your browser and navigate to `http://localhost:5173`.
 
 2. **Explore the API:**
     Use tools like Postman or the Swagger UI at `http://localhost:4000/api/products` to interact with the backend API.
