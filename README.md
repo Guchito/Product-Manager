@@ -26,12 +26,14 @@ This project utilizes the following technologies:
 
 - **React**: JavaScript library for building user interfaces.
 - **Tailwind CSS**: Utility-first CSS framework that streamlines web development by providing a set of pre-designed utility classes.
+- **Valibot**: Schema validation library
+- **Axios**: Promise-based HTTP Client for node.js and the browser to comunicate with the API
 
 
 ## Features
 
 - **Product Management**: Create, read, update, and delete products.
-- **Validation**: Ensures data integrity with Express Validator.
+- **Validation**: Ensures data integrity with Express Validator in the back end, and valibot in the frontend
 - **Logging**: Logs HTTP requests using Morgan.
 - **Testing**: Comprehensive testing with Jest and Supertest.
 - **API Documentation**: Interactive API documentation with Swagger.
