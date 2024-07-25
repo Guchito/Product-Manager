@@ -75,7 +75,7 @@ On another terminal:
     npm install
     ```
 2. **Set up environment variables:**
-    Create a `.env` file in the client root directory and add the following:
+    Create a `.env.local` file in the client root directory and add the following:
     ```
     VITE_API_URL=your_API_url
     ```
