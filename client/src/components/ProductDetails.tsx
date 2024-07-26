@@ -12,6 +12,7 @@ export async function action({params}:ActionFunctionArgs) {
         await deleteProduct(+params.id)
         return redirect('/')
     }
+
 }
 
 
@@ -51,6 +52,11 @@ export default function ProductDetails({product} : ProductDetailsProp) {
                     className="w-full"
                     method="post"
                     action= {`products/${product.id}/delete`} //same as router
+                    onSubmit={ (e ) => {
+                        if(!confirm('Do you want to delete this product?')){
+                            e.preventDefault()
+                        }
+                    }}
                 >
                     <input 
                         type = 'submit'
