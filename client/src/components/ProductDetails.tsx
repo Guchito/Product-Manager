@@ -1,14 +1,17 @@
 import { useNavigate , Form, ActionFunctionArgs, redirect } from "react-router-dom"
 import { formatCurrency } from "../helpers"
 import { Product } from "../types"
+import { deleteProduct } from "../services/ProductService"
 
 type ProductDetailsProp = {
     product: Product
 }
 
 export async function action({params}:ActionFunctionArgs) {
-    console.log(params.id)
-    return redirect('/')
+    if(params.id !== undefined){
+        await deleteProduct(+params.id)
+        return redirect('/')
+    }
 
 }
 
@@ -39,6 +42,11 @@ export default function ProductDetails({product} : ProductDetailsProp) {
                     className="w-full"
                     method="post"
                     action= {`products/${product.id}/delete`} //same as router
+                    onSubmit={ (e ) => {
+                        if(!confirm('Do you want to delete this product?')){
+                            e.preventDefault()
+                        }
+                    }}
                 >
                     <input 
                         type = 'submit'
