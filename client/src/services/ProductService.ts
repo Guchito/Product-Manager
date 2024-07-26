@@ -34,6 +34,7 @@ export async function getProducts(){
         const { data } = await axios(url)
         const result = safeParse(ProductsSchema, data.data)
         if(result.success){
+            result.output.sort((a, b) => a.price - b.price)
             return result.output
         }else{
             throw new Error('There was an error')
@@ -87,10 +88,27 @@ export async function deleteProduct(id : Product['id']) {
     try {
         const url = `${import.meta.env.VITE_API_URL}/api/products/${id}`
         await axios.delete(url)
+
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export async function updateProductAvailability(id : Product['id']) {
+    try {
+        const url = `${import.meta.env.VITE_API_URL}/api/products/${id}`
+        await axios.patch(url)
+
     } catch (error) {
         console.log(error)
     }
     
 
-    
 }
+
+
+
+    
+
+

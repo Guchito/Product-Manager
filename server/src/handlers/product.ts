@@ -2,12 +2,13 @@ import {Request, Response} from 'express'
 import Product from '../models/product.model'
 
 
-export const getProducts = async (req: Request,res: Response) => {
+export const getProducts = async (req: Request, res: Response) => {
     const products = await Product.findAll({
-        attributes: {exclude: ['createdAt', 'updatedAt']}
+        order: [
+            ['id', 'DESC']
+        ]
     })
     res.json({data: products})
-
 }
 
 
