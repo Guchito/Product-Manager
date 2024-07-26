@@ -90,10 +90,14 @@ On another terminal:
 To use the application, follow these steps:
 
 1. **Access the frontend:**
-    Open your browser and navigate to `http://localhost:5173`.
+    Open your browser and navigate to `http://localhost:5173` or `your_frontend_url`.
 
 2. **Explore the API:**
-    Use tools like Postman or the Swagger UI at `http://localhost:4000/api/products` to interact with the backend API.
+    Use tools like Postman at `{your_API_url}/api/products` to interact with the backend API.
+
+## Documentation
+
+To view the API documentation visit `{your_API_url}/docs`
 
 ## Testing
 
