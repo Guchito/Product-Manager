@@ -1,22 +1,19 @@
 import { useNavigate , Form, ActionFunctionArgs, redirect, useFetcher } from "react-router-dom"
 import { formatCurrency } from "../helpers"
 import { Product } from "../types"
-import axios from "axios"
+import { deleteProduct } from "../services/ProductService"
 
 type ProductDetailsProp = {
     product: Product
 }
 
 export async function action({params}:ActionFunctionArgs) {
-    try {
-        const url = `${import.meta.env.VITE_API_URL}/api/products/${params.id}`
-        await axios.delete(url)
-    } catch (error) {
-        console.log(error)
+    if(params.id !== undefined){
+        await deleteProduct(+params.id)
+        return redirect('/')
     }
-    return redirect('/')
-
 }
+
 
 export default function ProductDetails({product} : ProductDetailsProp) {
     const fetcher = useFetcher()
