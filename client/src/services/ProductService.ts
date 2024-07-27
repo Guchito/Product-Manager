@@ -34,8 +34,8 @@ export async function getProducts(){
         const { data } = await axios(url)
         const result = safeParse(ProductsSchema, data.data)
         if(result.success){
-            result.output.sort((a, b) => a.price - b.price)
-            return result.output
+            const sortedResult = result.output.sort((a, b) => a.price - b.price)
+            return sortedResult
         }else{
             throw new Error('There was an error')
         }
