@@ -93,11 +93,11 @@ To use the application, follow these steps:
     Open your browser and navigate to `http://localhost:5173` or `your_frontend_url`.
 
 2. **Explore the API:**
-    Use tools like Postman at `{your_API_url}/api/products` to interact with the backend API.
+    Use tools like Postman at `{your_API_url}/api/products` or `https://product-manager-ci7s.onrender.com/docs/` to interact with the backend API.
 
 ## Documentation
 
-To view the API documentation visit `{your_API_url}/docs`
+To view the API documentation visit `{your_API_url}/docs` or `https://product-manager-ci7s.onrender.com/docs/`
 
 ## Testing
 
