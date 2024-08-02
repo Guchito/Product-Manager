@@ -90,10 +90,10 @@ On another terminal:
 To use the application, follow these steps:
 
 1. **Access the frontend:**
-    Open your browser and navigate to `http://localhost:5173` or `your_frontend_url`.
+    Open your browser and navigate to `{your_frontend_url}` or `https://product-manager-rust.vercel.app/`
 
 2. **Explore the API:**
-    Use tools like Postman at `{your_API_url}/api/products` or `https://product-manager-ci7s.onrender.com/docs/` to interact with the backend API.
+    Use tools like Postman at `{your_API_url}/api/products` or `https://product-manager-ci7s.onrender.com/api/products/` to interact with the backend API.
 
 ## Documentation
 
