@@ -34,23 +34,15 @@ export default function Products() {
       </div>
 
       <div className="p-2">
-  <table className="w-full mt-5 table-auto">
-    <thead className="bg-slate-800 text-white">
-        <tr>
-            <th className="p-2">Product</th>
-            <th className="p-2">Price</th>
-            <th className="p-2">Availability</th>
-            <th className="p-2">Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-      {data.map(product => (
-          <ProductDetails
-              key={product.id}
-              product={product}
-          />
-      ))}
-    </tbody>
+      <table className="w-full mt-5 table-fixed">
+        <tbody>
+          {data.map(product => (
+              <ProductDetails
+                  key={product.id}
+                  product={product}
+              />
+          ))}
+        </tbody>
   </table>
 </div>
 

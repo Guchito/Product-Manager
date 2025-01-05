@@ -22,7 +22,7 @@ export default function ProductDetails({product} : ProductDetailsProp) {
 
     const isAvailable = product.availability
   return (
-    <tr className="border-b ">
+    <tr className="border-b-4 shadow-lg flex flex-col m-auto max-w-[400px] sm:max-w-[568px] sm:grid sm:grid-cols-2 sm:gap-3 md:max-w-[900px] md:grid lg:grid-cols-4">
         <td className="p-3 text-lg text-gray-800 text-center">
             {product.name}
         </td>
